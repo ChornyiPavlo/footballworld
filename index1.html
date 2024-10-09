@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Football World Pin-up - Real People, futbolu hobi, boş zaman ve eğlence olarak keşfetmek isteyenler için mükemmel bir platformdur. Futbol etkinlikleri ve sosyal etkileşim fırsatları ile futbol tutkunlarını bir araya getiriyor.">
+    <title>Football World Pin-up - Real People: Hobi, Boş Zaman ve Eğlence</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-48x48.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <style>
+
+
+      .lato-thin {
+        font-family: "Lato", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+      }
+
+      .lato-light {
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      .lato-regular {
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .lato-bold {
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .lato-black {
+        font-family: "Lato", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+      }
+
+      .lato-thin-italic {
+        font-family: "Lato", sans-serif;
+        font-weight: 100;
+        font-style: italic;
+      }
+
+      .lato-light-italic {
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      .lato-regular-italic {
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      .lato-bold-italic {
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      .lato-black-italic {
+        font-family: "Lato", sans-serif;
+        font-weight: 900;
+        font-style: italic;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Lato, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      .container {
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      header {
+
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .banner {
+        background-image: url('img/banner.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        position: relative;
+      }
+
+      .banner h1 {
+        font-size: 36px;
+        margin: 0;
+      }
+
+      .banner p {
+        font-size: 18px;
+      }
+
+      .banner a {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: white;
+        color: #7B68EE;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .section {
+        margin: 30px 0;
+        padding: 20px;
+        background-color: #f4f4f9;
+        border-radius: 8px;
+      }
+
+      .section:nth-child(even) {
+        background-color: #ffffff;
+      }
+
+      .section img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .reviews {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+      }
+
+      .review {
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        flex: 1 1 30%;
+        text-align: center;
+      }
+
+      .review img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+      }
+
+      .review .rating {
+        color: #f4a261;
+        font-size: 18px;
+      }
+
+      footer {
+        background-color: #7B68EE;
+        color: #856868;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      @media (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .reviews {
+          flex-direction: column;
+        }
+
+        .banner {
+          height: 500px;
+        }
+        .banner h1 {
+          font-size: 30px;
+        }
+      }
+
+      .app-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1220px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      .app-info {
+        max-width: 600px;
+      }
+
+      .app-info h1 {
+        margin: 0;
+        font-size: 48px;
+      }
+
+      .app-info p {
+        margin: 5px 0;
+        color: #8ab4f8;
+      }
+
+      .app-info .details {
+        color: #a1a1a1;
+        margin-bottom: 20px;
+      }
+
+      .stats {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+      }
+
+      .stats div {
+        margin-right: 20px;
+      }
+
+      .install-button, .share-button, .wishlist-button {
+        background-color: #34a853;
+        border: none;
+        color: #333;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .install-button {
+        background-color: #34a853;
+      }
+
+      .image-banner {
+        flex: 1;
+        height: 300px;
+        background-image: url('img/banner_1.jpg');
+        background-size: cover;
+      }
+
+      @media (max-width: 768px) {
+        .app-container {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .image-banner {
+          width: 100%;
+        }
+      }
+
+      .similar-games-container-simil {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .game-item-simil {
+        min-width: 120px;
+        text-align: center;
+        flex: 0 0 auto;
+      }
+
+      .game-item-simil img {
+        width: 80px;
+        height: 80px;
+        border-radius: 8px;
+      }
+
+      .game-title-simil {
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .developer-name-simil {
+        font-size: 12px;
+        color: #666;
+        margin-top: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .rating-simil {
+        font-size: 12px;
+        color: #666;
+        margin-top: 5px;
+      }
+
+      @media (max-width: 600px) {
+        .game-item-simil {
+          min-width: 100px;
+        }
+
+        .game-item-simil img {
+          width: 64px;
+          height: 64px;
+        }
+
+        .game-title-simil {
+          font-size: 12px;
+        }
+
+        .developer-name-simil {
+          font-size: 11px;
+        }
+
+        .rating-simil {
+          font-size: 11px;
+        }
+      }
+
+      .slider1 {
+        position: relative;
+        max-width: 1200px;
+        margin: auto;
+        overflow: hidden;
+      }
+
+      .slides1 {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slide1 {
+        min-width: 100%;
+        transition: 0.5s ease;
+      }
+
+      img {
+        width: 100%;
+        height: 380px;
+      }
+
+      button1 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.8);
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+      }
+
+      .prev {
+        left: 10px;
+      }
+
+      .next {
+        right: 10px;
+      }
+
+
+      @media (max-width: 768px) {
+        a {
+          padding: 8px;
+          font-size: 16px;
+        }
+
+        img {
+          height: auto;
+        }
+      }
+      #original {
+        font-family: 'Open Sans', sans-serif !important;
+        direction: ltr;
+        font-size: 1em;
+        margin: 0;
+        background-color: #07498f;
+        color: #fff;
+      }
+
+      .wrap__btn--PxHri--section {
+        background-image: url('img/bg-desc.png');
+        background-size: cover;
+        width: 914px;
+        margin: 0 auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo-img {
+        margin-bottom: 20px;
+        width: 200px;
+        height: auto;
+      }
+
+      .button {
+        align-items: center;
+        background: #FFFFFF;
+        border: 0 solid #E2E8F0;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        box-sizing: border-box;
+        color: #1A202C;
+        display: inline-flex;
+        font-weight: 700;
+        height: 56px;
+        justify-content: center;
+        line-height: 24px;
+        overflow-wrap: break-word;
+        padding: 24px;
+        text-decoration: none;
+        width: auto;
+        border-radius: 8px;
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+
+      .button {
+        padding: 29px 55px;
+        font-size: 18px;
+        text-decoration: none !important;
+      }
+
+      .main__img--l83Xf--section {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.0);
+        padding: 19px;
+        border-radius: 0px;
+        padding: 46px;
+      }
+
+      .main__img--l83Xf--section h1 {
+        font-weight: 400;
+        font-size: 37px;
+        border-bottom: 1px dotted #ccc;
+        padding-bottom: 22px;
+        margin-top: 0px;
+        color: #fff;
+      }
+
+      .button__header--0mbZF--element {
+        display: flex;
+        gap: 29px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 22px;
+      }
+
+      #main {
+        display: block;
+      }
+
+      #original {
+        display: none;
+      }
+
+      .button-yes {
+        background: #04cfa6;
+        box-shadow: 0 2px #082144;
+        transition: 0.5s;
+      }
+
+      .button-no {
+        background: #ff2401 !important;
+        padding: 29px 55px;
+        font-size: 18px;
+        text-decoration: none;
+        box-shadow: 0 3px #082144;
+      }
+
+      @media (max-width: 1200px) {
+        .wrap__btn--PxHri--section {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .button__header--0mbZF--element {
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 768px) {
+        #main {
+          display: none;
+        }
+
+        #original {
+          display: block;
+        }
+
+        .hero-image {
+          width: 100%;
+        }
+      }
+    </style>
+</head>
+<body>
+<div id="main">
+
+<header>
+    <div class="container">
+        <h1 style="color: #333;">Football World - Real People</h1>
+        <nav>
+            <ul style="color: #333;">
+                <li><a href="index.html" style="color: #333;">Ana Sayfa</a></li>
+                <li><a href="#about" style="color: #333;">Football World Hakkında</a></li>
+                <li><a href="policy.html" style="color: #333;">Gizlilik Politikası</a></li>
+                <li><a href="terms.html" style="color: #333;">Şartlar ve koşullar</a></li>
+                <li><a href="#contact" style="color: #333;">İletişim</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="banner">
+    <div>
+        <h1>Football World - Real People Pin-up: Hobi, Boş Zaman ve Eğlence</h1>
+        <p>Futbol, dünya genelinde milyonlarca insanın tutkuyla bağlı olduğu bir spor dalıdır. Futbol sadece bir spor
+            değil; aynı zamanda sosyal bir etkinlik, bir hobi ve boş zaman aktivitesidir. </p>
+        <a href="#contact">Düzenlemek</a>
+    </div>
+</div>
+
+<div class="app-container">
+    <div class="app-info">
+        <h1>Football World </h1>
+        <p>Futbol Prensi</p>
+        <div class="details">Reklam içerir · Uygulama içi satın alma işlemleri</div>
+        <div class="stats">
+            <div>
+                <strong>4.6★</strong><br>2 milyon yorum
+            </div>
+            <div>
+                <strong>100M+</strong><br>İndirilenler
+            </div>
+            <div>
+                3+ için derecelendirildi
+            </div>
+        </div>
+        <div>
+            <button class="install-button"><a href="https://play.google.com/store/apps/details?id=com.audify.football">Düzenlemek</a>
+            </button>
+            <button class="share-button"><a href="https://play.google.com/store/apps/details?id=com.audify.football">Paylaşmak</a>
+            </button>
+            <button class="wishlist-button"><a href="https://play.google.com/store/apps/details?id=com.audify.football">İstek
+                listesine ekle</a></button>
+        </div>
+    </div>
+    <div class="image-banner"></div>
+</div>
+
+<main class="container">
+    <section class="section" id="about">
+        <h2>Futbolun Eğlenceli Yüzü</h2>
+        <p>Futbolun Eğlenceli Yüzü Futbol, sadece sahada oynanan bir oyun olmanın ötesinde, hobi, eğlence ve boş zaman
+            etkinliği olarak insanları bir araya getiren bir aktivitedir. Maç günleri, aile ve arkadaşlarla geçirilen
+            özel zamanlar, futbol izleme etkinlikleri ve futbol sohbetleri, bu sporun sosyal hayatımızdaki yerini
+            güçlendirir. Football World - Real People, futbolun bu sosyal yönünü vurgulamakta ve futbolun, boş
+            zamanlarımızda nasıl eğlenceli bir pin-up aktivitesi haline geldiğini göstermektedir.</p>
+        <img src="img/00_1.jpg" alt="About Us">
+    </section>
+
+
+    <section class="section">
+        <h2>Reviews</h2>
+        <div class="reviews">
+            <div class="review">
+                <img src="img/Abuzər.jpg" alt="Reviewer 1">
+                <div class="rating">★★★★☆</div>
+                <p>Football World - Real People, futbol tutkum için harika bir platform oldu. Arkadaşlarımla maçlara
+                    katılmak ve yeni insanlarla tanışmak boş zamanlarımı çok daha eğlenceli hale getirdi. Futbolu bir
+                    hobi olarak görmek isteyen herkes için ideal bir yer. Kesinlikle tavsiye ederim!</p>
+                <small>1 Ekim 2024</small>
+            </div>
+            <div class="review">
+                <img src="img/Adnan.jpeg" alt="Reviewer 2">
+                <div class="rating">★★★★★</div>
+                <p>Bu platform sayesinde futbol sevgim daha da arttı. Hem eğleniyorum hem de futbol kültürünü daha
+                    yakından tanıyorum. Özellikle hafta sonları eğlenceli etkinlikler düzenlemeleri harika. Futbolu bir
+                    yaşam tarzı olarak benimseyen herkesin boş zaman aktivitelerine dahil olabileceği bir yer.</p>
+                <small>17 Haziran 2024</small>
+            </div>
+            <div class="review">
+                <img src="img/Azər.jpeg" alt="Reviewer 3">
+                <div class="rating">★★★☆☆</div>
+                <p>Football World - Real People, futbolu seven insanlar için harika bir deneyim sunuyor. Pin-up tarzı
+                    etkinlikler ve turnuvalar ile boş zamanlarımı değerlendirmek gerçekten keyifli. Hem futbol oynayıp
+                    hem de eğlence dolu anlar yaşayabileceğiniz bir platform.</p>
+                <small>5 Eylül 2024</small>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="similar-games-container-simil">
+        <div class="game-item-simil">
+            <img src="img/1-1.jpeg" alt="Game Image 1">
+            <div class="game-title-simil">Soccer Superstar</div>
+            <div class="developer-name-simil">Gerçek Serbest Stil Futbol</div>
+            <div class="rating-simil">4.5 ★</div>
+        </div>
+        <div class="game-item-simil">
+            <img src="img/1-2.jpeg" alt="Game Image 2">
+            <div class="game-title-simil">2 Player games</div>
+            <div class="developer-name-simil">JindoBlu</div>
+            <div class="rating-simil">4.3 ★</div>
+        </div>
+        <div class="game-item-simil">
+            <img src="img/1-3.jpeg" alt="Game Image 3">
+            <div class="game-title-simil">Chess - Offline</div>
+            <div class="developer-name-simil">GamoVation</div>
+            <div class="rating-simil">4.9 ★</div>
+        </div>
+        <div class="game-item-simil">
+            <img src="img/1-4.jpeg" alt="Game Image 4">
+            <div class="game-title-simil">Dream League Soccer</div>
+            <div class="developer-name-simil">First Touch Oyunları</div>
+            <div class="rating-simil">4.1 ★</div>
+        </div>
+        <div class="game-item-simil">
+            <img src="img/1-5.jpeg" alt="Game Image 5">
+            <div class="game-title-simil">Tic Tac Toe 2</div>
+            <div class="developer-name-simil">Onetap Global</div>
+            <div class="rating-simil">4.1 ★</div>
+        </div>
+        <div class="game-item-simil">
+            <img src="img/1-6.png" alt="Game Image 6">
+            <div class="game-title-simil">Flags Quiz</div>
+            <div class="developer-name-simil">PrizePool Studios</div>
+            <div class="rating-simil">4.6 ★</div>
+        </div>
+    </div>
+
+    <!-- Additional sections -->
+    <section class="section">
+        <h2>Hobi Olarak Futbol Pin-up</h2>
+        <p>Futbol oynamak, birçok kişi için sadece bir spor değil, aynı zamanda bir hobi, boş zaman değerlendirme aracı
+            ve eğlence kaynağıdır. Kendi futbol takımınızı kurmak, amatör liglerde mücadele etmek veya sadece
+            arkadaşlarınızla sahada oynamak, futbolu bir hobi olarak benimsemenin harika yollarıdır. Football World -
+            Real People, bu tür etkinlikler düzenleyerek futbolu bir eğlence ve pin-up tarzı bir yaşam biçimi haline
+            getirenlere destek vermektedir.</p>
+        <img src="img/00_2.jpg" alt="Services">
+    </section>
+    <section class="section">
+        <h2>Boş Zaman Etkinlikleri</h2>
+        <p>Futbol, boş zamanlarınızı değerlendirmek için mükemmel bir yoldur. Maç izlemek, futbol oyunları oynamak ya da
+            arkadaşlarınızla birlikte futbol antrenmanları düzenlemek, boş zamanlarınızı eğlenceli hale getirebilir.
+            Football World - Real People platformu, futbolu bir hobi ve eğlence aracı olarak görenleri bir araya
+            getirerek, bu tür pin-up etkinlikleri organize eder ve futbol severleri buluşturur.</p>
+        <img src="img/00_3.jpg" alt="Portfolio">
+    </section>
+    <section class="section">
+        <h2>Futbol Kültürü ve Sosyal Etkileşim</h2>
+        <p>Futbol, sadece bir spor değil, aynı zamanda bir pin-up kültürüdür. Farklı bölgelerde futbolun nasıl
+            kutlandığı, oynandığı ve izlenildiği konusunda farklılıklar vardır. Bu çeşitlilik, futbolun global bir spor
+            olmasının en büyük nedenlerinden biridir. Football World - Real People, futbol pin-up kültürünü kutlayarak,
+            insanları bir araya getirir ve futbolun birleştirici gücünü vurgular.</p>
+        <img src="img/00_4.jpg" alt="Testimonials">
+    </section>
+    <section class="section">
+        <h2>Eğlenceli Aktiviteler Pin-up </h2>
+        <p>Futbol etkinlikleri, futbol severler için birçok eğlenceli aktivite sunmaktadır. Futbol turnuvaları, izleyici
+            deneyimi ve etkileşimli oyunlar, bu boş zaman etkinliklerinin bazılarıdır. Football World - Real People,
+            futbolu bir hobi olarak gören ve pin-up tarzında eğlenmeyi seven futbol severlerin bir araya gelip keyifli
+            vakit geçirebileceği etkinlikler düzenlemekte ve sosyal etkileşimi artırmaktadır.</p>
+        <img src="img/00_5.jpg" alt="Team">
+    </section>
+    <section class="section">
+        <h2>Sonuç</h2>
+        <p>Futbol, sadece bir spor değil; aynı zamanda bir yaşam tarzıdır. Football World - Real People, futbolun hobi,
+            boş zaman ve eğlence açısından sunduğu fırsatları keşfetmek isteyenler için mükemmel bir platformdur.
+            Futbolun birleştirici gücünden faydalanarak, daha fazla insanı bu harika sporun içine çekmek için
+            buradayız.</p>
+        <img src="img/00_6.jpg" alt="Blog">
+    </section>
+
+</main>
+
+<footer id="contact">
+    <div class="container">
+        <p style="color:#fff">&copy; 2024 Your Company. All rights reserved. | Adres: 6 Uzeyir Hajibeyov St, Baku, Azerbaijan | Telefon:
+            +994706027777 | Email: info@pinaz.footballrp.com </p>
+    </div>
+</footer>
+</div>
+<div id="original">
+    <div class="wrap__btn--PxHri--section">
+        <div class="main__img--l83Xf--section">
+            <img loading="lazy" src="img/logo.svg" alt="Logo" class="logo-img">
+            <h1>– 18 yaşınız var?</h1>
+            <div class="button__header--0mbZF--element">
+                <a href="#" class="button button-yes">Bəli</a>
+                <a href="#" class="button button-no">Xeyr</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Football World Pin-up",
+        "url": "",
+        "logo": "/favicon/favicon.ico"
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WPHeader",
+        "headline": "Football World Pin-up",
+        "description": "Football World Pin-up - Real People, futbolu hobi, boş zaman ve eğlence olarak keşfetmek isteyenler için mükemmel bir platformdur. Futbol etkinlikleri ve sosyal etkileşim fırsatları ile futbol tutkunlarını bir araya getiriyor.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Football World Pin-up",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "/favicon/favicon.ico"
+            }
+        }
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Football World Pin-up",
+        "description": "Football World Pin-up - Real People, futbolu hobi, boş zaman ve eğlence olarak keşfetmek isteyenler için mükemmel bir platformdur. Futbol etkinlikleri ve sosyal etkileşim fırsatları ile futbol tutkunlarını bir araya getiriyor.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Football World Pin-up"
+        },
+        "license": "A license document that applies to this content, typically indicated by URL"
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SiteNavigationElement",
+        "name": "Main Navigation",
+        "url": "",
+        "hasPart": [
+            {
+                "@type": "WebPage",
+                "name": "Home",
+                "url": ""
+            },
+            {
+                "@type": "WebPage",
+                "name": "Policy",
+                "url": "/policy.html"
+            },
+            {
+                "@type": "WebPage",
+                "name": "Terms of Conditions",
+                "url": "/terms.html"
+            }
+        ]
+    }
+</script>
+</html>

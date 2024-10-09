@@ -1,0 +1,7 @@
+User-Agent: *
+
+Disallow:
+
+
+Sitemap: http://pinaz.footballrp.com/sitemap.xml
+Host: pinaz.footballrp.com
